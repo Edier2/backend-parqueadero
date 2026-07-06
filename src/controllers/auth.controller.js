@@ -49,7 +49,7 @@ export const login = async (req, res) => {
                 id: user.id_usuario,
                 usuario: user.usuario
             },
-            'secreto_sena',
+            process.env.JWT_SECRET,
             { expiresIn: '2h' }
         );
 
